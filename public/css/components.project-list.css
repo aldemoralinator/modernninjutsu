@@ -1,0 +1,50 @@
+/* project list component */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-gap: 1em; */
+
+    /* justify-content: space-between; */
+}
+
+.project-list__project-item {
+    height: 4em;
+    width: 8em;
+    background-color: rgb(225, 234, 236);
+    display: grid;
+    place-items: center; 
+    padding: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.project-item__name {
+    font-size: 0.7em;
+    max-width: calc(10em);
+    white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+    color:  rgb(95, 139, 160);
+}
+
+.project-item__members {
+    font-size: 0.5em;
+    color:  orange;
+    margin: 5px 0;
+}
+
+.project-item__created-at {
+    font-size: 0.5em;
+    color:  rgb(144, 146, 146);
+}
+
+.project-list__project-create {
+    height: 4em;
+    width: 8em;
+    margin-right: 10px;
+    border: 1px dashed rgb(202, 218, 223);
+    color: rgb(202, 218, 223);
+    display: grid;
+    place-items: center;
+}

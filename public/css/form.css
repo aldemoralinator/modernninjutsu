@@ -1,0 +1,99 @@
+.whole-page-form {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    width: 300px;
+    border: 1px solid rgb(32, 95, 116);
+}
+
+.form {
+    width: 100%;
+}
+
+.form-title {
+    font-size: 0.8em;
+    color: white;
+    background-color: rgb(32, 95, 116);
+    padding: 5px 10px;
+}
+
+.form__form-group {
+    width: 100%;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.form-group__label {
+    width: 100%;
+    display: block;
+    font-size: 0.8em;
+    color: rgb(32, 95, 116);
+}
+
+.form-group__input {
+    width: 100%;
+    font-size: 0.8em;
+    padding: 3px 5px;
+    border: 1px solid rgb(32, 95, 116);
+    color: rgb(32, 95, 116);
+    outline:none;
+}
+
+.form-group__error {
+    border: 1px solid red !important;
+}
+
+.form-group__error-message {
+    font-size: 0.5em;
+    color: red;
+}
+
+.form-group__checkbox {
+    color: inherit;
+}
+
+.form-group__checkbox-label {
+    color: rgb(32, 95, 116);
+    font-size: 0.8em;
+}
+
+.form__submit-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+
+}
+
+.form__submit {
+    background-color: transparent;
+    outline: none;
+    border: 1px solid rgb(32, 95, 116);
+    color: rgb(32, 95, 116);
+    padding: 5px 10px;
+    font-size: 0.8em;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.form__submit:hover {
+    box-shadow: 0 0 5px lightsteelblue;
+}
+
+.submit-container__forgot-password {
+    flex: 1;
+    font-size: 0.6em;
+    text-align: center;
+    color: rgb(32, 95, 116);
+}
+
+.submit-container__forgot-password:hover {
+    color: black;
+}

@@ -1,0 +1,323 @@
+.project-dashboard {
+    position: relative;
+    padding-top: calc(10px + 6px + 0.8em);
+}
+
+.project-dashboard__nav-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    position: fixed;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+    background-color: orange;
+    color: white;
+    padding: 5px 10px;
+    z-index: 5;
+}
+
+.nav-links__link {
+    font-size: 0.8em;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 3px 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-links__link__name {
+    margin: 0 3px;
+    max-width: 100px;
+    white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.fa-cogs {
+    font-size: 0.8em;
+}
+
+.project-dashboard__project-body {
+    padding: 10px;
+    color: rgb(32, 37, 59);
+    color: rgb(17, 90, 86);
+    color: rgb(30, 146, 140);
+    color: lightsteelblue;
+    color: rgb(227, 233, 240);
+    color: rgb(246, 248, 250);
+    display: flex;
+}
+
+.project-body__discussions { 
+    flex: 1;
+}
+
+.project-body__title {
+    font-size: 1em;
+    font-weight: 700;
+    color: rgb(30, 146, 140);
+    margin-bottom: 10px;
+    
+}
+
+.project-body__create-post-form {
+    /* border: 1px solid lightsteelblue; */
+    color: lightsteelblue;
+    padding-bottom: 10px;
+    border-bottom: 2px solid lightsteelblue;
+}
+
+.create-post-form__label {
+    font-size: 0.8em;
+}
+
+.create-post-form__input {
+    width: 100%;
+    height: 3em;
+    resize: none;
+    font-size: 1em;
+    color: lightsteelblue;
+    border: none;
+    background-color: rgb(246, 248, 250);
+}
+
+.create-post-form__input:focus, .create-post-form__submit:focus {
+    /* border: 1px solid lightsteelblue;
+    border: none; */
+    outline: none;
+}
+
+.create-post-form__submit {
+    /* width: 100%; */
+    padding: 3px 15px;
+    border: 1px solid rgb(227, 233, 240);
+    color: rgb(227, 233, 240);
+    font-size: 0.6em;
+    font-weight: 700;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.create-post-form__submit:hover {
+    box-shadow: 0 0 5px rgb(227, 233, 240);
+}
+
+
+
+.discussions__post-list {
+    margin-top: 10px;
+}
+
+.post-list__post-container {
+    margin-bottom: 20px;
+}
+
+.post-list__post-container:hover {
+    background-color: rgb(246, 248, 250);
+}
+
+.post-container__project {
+    font-size: 0.8em;
+    color: rgb(17, 90, 86);
+    border-bottom: 1px solid rgb(227, 233, 240);
+    position: relative; 
+    display: flex;
+    align-items: center;
+}
+
+.post-container__body {
+    border-bottom: 1px solid rgb(227, 233, 240);
+}
+
+.post-container__body__message {
+    font-size: 0.8em; 
+    color: lightsteelblue;
+}
+
+.post-container__body__username {
+    font-size: 0.6em; 
+    color: rgb(215, 57, 221);
+}
+
+.post-container__body__created-at {
+    font-size: 0.6em; 
+    color: lightsteelblue;
+}
+
+.project-body__member-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    display: none;
+}
+
+.member-container__hide {
+    flex: 1;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.project-body__member-list {
+    width: 200px;
+    padding: 20px;
+    padding-top: calc(10px + 6px + 0.8em + 10px);
+    background-color: white;
+}
+
+.member-list__title {
+    font-size: 1em;
+    font-weight: 700;
+    color: rgb(30, 146, 140);
+    margin-bottom: 10px;
+}
+
+.member-list__item {
+    font-size: 0.8em;
+    /* font-weight: 700; */
+    color: rgb(215, 57, 221);
+    display: block;
+    margin-bottom: 5px; 
+}
+
+.manage-project--mobile {
+    display: flex;
+}
+
+.special__manage-project--mobile {
+    display: flex;
+    color: orange;
+    font-size: 1.2em;
+    font-weight: 700;
+    border: 1px solid orange;
+    margin-bottom: 20px;
+}
+
+.special__invitation {
+    font-size: 0.8em; 
+    color: lightseagreen;
+    border: 1px solid lightseagreen;
+    border-radius: 5px;
+    padding: 3px 5px; 
+}
+
+.special__comment--option {
+    position: absolute;
+    right: 5px;
+    /* top: 1px; */
+    font-size: 0.8em;
+    border: 1px solid grey;
+    background-color: #f0f0f0;
+    border-radius: 2px;
+}
+
+.comment--option__dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(100,100,100,0.1);
+    z-index: 1;
+    padding: 5px;
+    margin-top: 2px;
+    /* min-height: 50px; */
+  }
+
+
+.special__comment--option:hover .comment--option__dropdown-content {
+    display: block;
+}
+  
+  /* Links inside the dropdown */
+.comment--option__dropdown-content .dropdown-content__btn {
+    color: lightsteelblue;
+    font-size: 1em;
+    padding: 3px 0;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    outline: transparent;
+}
+
+.comment--option__dropdown-content .dropdown-content__btn:hover {
+    color: lightseagreen; 
+}
+
+.manage-project--desktop {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .special__manage-project--mobile {
+        display: none;
+    }
+
+    .manage-project--mobile {
+        display: none;
+    }
+
+    .manage-project--desktop {
+        display: flex;
+    }
+    .project-dashboard__nav-links {
+        
+    }
+
+    .nav-links__link__name {
+        max-width: 200px;
+    }
+
+    .project-body__discussions { 
+        padding-right: 20px;
+        /* border: 1px solid black; */
+    }
+    .project-body__member-container {
+        position: relative;
+        top: unset;
+        right: unset;
+        left: unset;
+        bottom: unset;
+        width: 220px;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .member-list__title {
+        padding-left: 20px;
+    }
+
+    .project-body__member-list {
+        position: fixed;
+        right: calc(1200px -(100vw / 2));
+        width: 220px;
+        padding: 0;
+        background-color: white;
+        z-index: inherit;
+    }
+
+    .special-case__border-left {
+        min-height: 100px;
+
+        padding-left: 20px;
+        border-left: 3px solid rgb(227, 233, 240);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .project-dashboard__project-body {
+        padding: 10px 0;
+    }
+}

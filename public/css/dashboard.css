@@ -1,0 +1,35 @@
+.dashboard-container {
+    width: 100%;
+    padding: 20px;
+}
+
+.dashboard-container__projects-container {
+    width: 100%;
+}
+
+.projects-container__title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: rgb(30, 146, 140);
+    margin-bottom: 15px;
+}
+
+
+/* discussion list component */
+
+
+@media only screen and (min-width: 620px) {
+    .project-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .dashboard-container {
+        padding: 0;
+    }
+    
+    .project-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}

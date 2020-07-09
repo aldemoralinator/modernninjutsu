@@ -1,0 +1,142 @@
+.invitation-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-invites {
+    flex: 1;
+    border-right: 2px solid lightblue; 
+    padding: 0 10px;
+}
+
+.invite-people {
+    flex: 1;
+    padding: 0 10px;
+    /* border: 1px solid lightblue;  */
+}
+
+.special-case__empty {
+    /* font-size: 0.8em; */
+    color: lightsteelblue;
+}
+
+/* *************************************************** */
+.project-invites__title {
+    font-size: 1em;
+    font-weight: 700;
+    color: lightseagreen;
+    margin-bottom: 20px;
+}
+
+.invitation-item {
+    /* background-color: #fafafa; */
+    margin-bottom: 20px;
+    color: lightseagreen;
+    
+}
+
+.invitation__head {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    font-size: 0.8em;
+    border-bottom: 1px solid rgb(17, 90, 86);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.invitation__name {
+    color: lightseagreen;
+    font-weight: 700;
+}
+
+
+.invitation__members {
+    font-size: 0.6em;
+    color: orange;
+}
+
+.invitation__date {
+    font-size: 0.6em;
+    color: lightsteelblue;
+}
+
+.invitation__introduction {
+    color: rgb(17, 90, 86);
+    font-size: 0.8em;
+}
+
+.invitation__response__dropdown {
+    position: absolute;
+    right: 0;
+    /* top: 0; */
+    border: 1px solid lightseagreen;
+    font-size: 0.8em;
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(100,100,100,0.1);
+    z-index: 1;
+    padding: 5px;
+    margin-top: 2px;
+    min-height: 50px;
+  }
+
+
+.invitation__response__dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+  /* Links inside the dropdown */
+.dropdown-content a {
+    color: lightsteelblue;
+    font-size: 1em;
+    padding: 3px 0;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.dropdown-content a:hover {
+    color: lightseagreen; 
+}
+
+/* *************************************************** */
+.invite-people__title {
+    font-size: 1em;
+    font-weight: 700;
+    color: lightseagreen;
+    margin-bottom: 20px;
+}
+
+.invite-people__list {
+    color: inherit;
+}
+
+.invite-people__list-item {
+    position: relative;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.invite-people__list-item:hover {
+    background-color: #f9f9f9;
+}
+
+@media only screen and (min-width: 768px) {
+    .invitation-main {
+        flex-direction: row;
+    }
+    
+}
