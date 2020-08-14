@@ -28,23 +28,15 @@ class ProfileController extends Controller
     }
 
     public function update(Request $request, User $profile)
-    {  
-        // $imageName = $request->file('avatar')->getRealPath();
-        // return Cloudder::upload($request->file('avatar'), null);
-
-        $validated = request()->validate([
-            // 'avatar' => [
-            //     'required', 
-            //     'file'
-            // ],
+    {   
+        $validated = request()->validate([ 
             'avatar'=>'required|mimes:jpeg,bmp,jpg,png|between:1, 6000',
             'firstname' => 'nullable|string|max:24',
             'lastname' => 'nullable|string|max:24',
             'username' => [
                 'required',
                 'string',
-                'max:255',
-                // 'unique:users',
+                'max:255', 
                 Rule::unique('users')->ignore($profile),
                 'alpha_dash'
             ],
@@ -52,24 +44,11 @@ class ProfileController extends Controller
                 'required', 
                 'string', 
                 'email', 
-                'max:255', 
-                // 'unique:users',
+                'max:255',  
                 Rule::unique('users')->ignore($profile),
             ],
             'contact_number' => 'nullable|string|max:11',
-        ]);
-        // $profile->firstname = $validated['firstname'];
-        // $profile->lastname = $validated['lastname'];
-        // $profile->username = $validated['username'];
-        // $profile->email = $validated['email'];
-        // $profile->contact_number = $validated['contact_number'];
-        // $profile->save();
-         
-        // $validated['avatar'] = Cloudder::upload($imageName, null);
-
-        // $image = $request->file('avatar');
- 
-        // $name = $request->file('avatar')->getClientOriginalName();
+        ]);       
  
         $avatar = $request->file('avatar')->getRealPath();
  
@@ -80,8 +59,6 @@ class ProfileController extends Controller
         $validated['avatar'] = Cloudder::show(Cloudder::getPublicId(), [
             "width" => $width, "height"=>$height
         ]);
- 
-        // $validated['avatar'] = request('avatar')->store('avatars', 'google');
 
         $profile->update($validated);
 

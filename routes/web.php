@@ -145,23 +145,6 @@ Route::middleware('auth')->group(function () {
         'PostController@destroy'
     )->name('post_destroy')->middleware('can:delete,post');
 
-    // Route::get('/test', function () {
-    //     storagePut('/aldem/testfile.png', request('file.txt'));
-    // });
-
-    // Route::get('test', function() { 
-    //     Storage::disk('google')->put('test.txt', 'Hello World');
-    // });
-
-    Route::get('/test', 'ImageUploadController@home');
-
-    Route::post('/upload/images', [
-        'uses'   =>  'ImageUploadController@uploadImages',
-        'as'     =>  'uploadImage'
-    ]);
-    
-  
-
 }); });
 
 
